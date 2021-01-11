@@ -96,7 +96,7 @@ namespace MarketOtamasyon.Forms
         {
             dataGridView1.DataSource = otomasyonContext.Kullanicis.Select(x => new
             {
-
+                Id= x.KullaniciId,
                 Kullanıcı_Adı = x.KullaniciAdi,
                 Şifre = x.Sifre,
                 Son_Giriş_Tarihi = x.sonGirisTarihi
