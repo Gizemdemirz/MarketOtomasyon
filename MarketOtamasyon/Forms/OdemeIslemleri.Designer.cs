@@ -43,9 +43,10 @@ namespace MarketOtamasyon.Forms
             this.lblToplam = new System.Windows.Forms.Label();
             this.lblBorc = new System.Windows.Forms.Label();
             this.grpboxOdeme = new System.Windows.Forms.GroupBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.btnListele = new System.Windows.Forms.Button();
             this.lblKayit = new System.Windows.Forms.Label();
             this.lblKytsyi = new System.Windows.Forms.Label();
-            this.btnListele = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpboxOdeme.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +66,7 @@ namespace MarketOtamasyon.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 33);
+            this.label1.Location = new System.Drawing.Point(79, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 17);
             this.label1.TabIndex = 2;
@@ -74,7 +75,7 @@ namespace MarketOtamasyon.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 76);
+            this.label2.Location = new System.Drawing.Point(59, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 2;
@@ -83,7 +84,7 @@ namespace MarketOtamasyon.Forms
             // lblÖdeme
             // 
             this.lblÖdeme.AutoSize = true;
-            this.lblÖdeme.Location = new System.Drawing.Point(7, 113);
+            this.lblÖdeme.Location = new System.Drawing.Point(10, 159);
             this.lblÖdeme.Name = "lblÖdeme";
             this.lblÖdeme.Size = new System.Drawing.Size(101, 17);
             this.lblÖdeme.TabIndex = 2;
@@ -91,21 +92,21 @@ namespace MarketOtamasyon.Forms
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(121, 28);
+            this.txtAd.Location = new System.Drawing.Point(124, 77);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(84, 22);
             this.txtAd.TabIndex = 3;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(121, 66);
+            this.txtSoyad.Location = new System.Drawing.Point(124, 118);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(84, 22);
             this.txtSoyad.TabIndex = 3;
             // 
             // txtÖdeme
             // 
-            this.txtÖdeme.Location = new System.Drawing.Point(121, 111);
+            this.txtÖdeme.Location = new System.Drawing.Point(124, 159);
             this.txtÖdeme.Name = "txtÖdeme";
             this.txtÖdeme.Size = new System.Drawing.Size(84, 22);
             this.txtÖdeme.TabIndex = 3;
@@ -129,7 +130,7 @@ namespace MarketOtamasyon.Forms
             // 
             // btnOdeme
             // 
-            this.btnOdeme.Location = new System.Drawing.Point(19, 156);
+            this.btnOdeme.Location = new System.Drawing.Point(27, 201);
             this.btnOdeme.Name = "btnOdeme";
             this.btnOdeme.Size = new System.Drawing.Size(89, 47);
             this.btnOdeme.TabIndex = 1;
@@ -140,10 +141,11 @@ namespace MarketOtamasyon.Forms
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(138, 76);
+            this.lblId.Location = new System.Drawing.Point(88, 36);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(0, 17);
+            this.lblId.Size = new System.Drawing.Size(23, 17);
             this.lblId.TabIndex = 4;
+            this.lblId.Text = "Id:";
             // 
             // lblToplam
             // 
@@ -163,20 +165,39 @@ namespace MarketOtamasyon.Forms
             // 
             // grpboxOdeme
             // 
+            this.grpboxOdeme.Controls.Add(this.txtId);
             this.grpboxOdeme.Controls.Add(this.btnListele);
             this.grpboxOdeme.Controls.Add(this.txtÖdeme);
             this.grpboxOdeme.Controls.Add(this.txtSoyad);
             this.grpboxOdeme.Controls.Add(this.txtAd);
             this.grpboxOdeme.Controls.Add(this.lblÖdeme);
+            this.grpboxOdeme.Controls.Add(this.lblId);
             this.grpboxOdeme.Controls.Add(this.label2);
             this.grpboxOdeme.Controls.Add(this.label1);
             this.grpboxOdeme.Controls.Add(this.btnOdeme);
-            this.grpboxOdeme.Location = new System.Drawing.Point(29, 172);
+            this.grpboxOdeme.Location = new System.Drawing.Point(29, 141);
             this.grpboxOdeme.Name = "grpboxOdeme";
-            this.grpboxOdeme.Size = new System.Drawing.Size(222, 219);
+            this.grpboxOdeme.Size = new System.Drawing.Size(222, 262);
             this.grpboxOdeme.TabIndex = 6;
             this.grpboxOdeme.TabStop = false;
             this.grpboxOdeme.Text = "Ödeme Paneli";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(124, 36);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(84, 22);
+            this.txtId.TabIndex = 9;
+            // 
+            // btnListele
+            // 
+            this.btnListele.Location = new System.Drawing.Point(124, 201);
+            this.btnListele.Name = "btnListele";
+            this.btnListele.Size = new System.Drawing.Size(89, 47);
+            this.btnListele.TabIndex = 4;
+            this.btnListele.Text = "Borç Listele";
+            this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // lblKayit
             // 
@@ -194,16 +215,6 @@ namespace MarketOtamasyon.Forms
             this.lblKytsyi.Size = new System.Drawing.Size(0, 17);
             this.lblKytsyi.TabIndex = 8;
             // 
-            // btnListele
-            // 
-            this.btnListele.Location = new System.Drawing.Point(116, 156);
-            this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(89, 47);
-            this.btnListele.TabIndex = 4;
-            this.btnListele.Text = "Borç Listele";
-            this.btnListele.UseVisualStyleBackColor = true;
-            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
-            // 
             // OdemeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,7 +226,6 @@ namespace MarketOtamasyon.Forms
             this.Controls.Add(this.grpboxOdeme);
             this.Controls.Add(this.lblBorc);
             this.Controls.Add(this.lblToplam);
-            this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.lblAra);
             this.Controls.Add(this.dataGridView1);
@@ -249,5 +259,6 @@ namespace MarketOtamasyon.Forms
         private System.Windows.Forms.Label lblKayit;
         private System.Windows.Forms.Label lblKytsyi;
         private System.Windows.Forms.Button btnListele;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

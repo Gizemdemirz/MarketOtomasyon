@@ -68,29 +68,32 @@ namespace MarketOtamasyon.Forms
             {
                 int id = int.Parse(txtID.Text);
                 var tedarikci = otomasyonContext.Tedarikcis.Find(id);
-
-                if (double.Parse(txtÖdeme.Text) <= tedarikci.AlınacakTutar & tedarikci.Ad.Contains(txtAd.Text))
+                if (tedarikci != null)
                 {
-                    tedarikci.AlınacakTutar -= int.Parse(txtÖdeme.Text);
-                    otomasyonContext.SaveChanges();
-                    MessageBox.Show("Ödeme işlemi gerçekleşti.", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    TedarikciListele();
-                    Temizle();
+                    if (double.Parse(txtÖdeme.Text) <= tedarikci.AlınacakTutar & tedarikci.Ad.Contains(txtAd.Text))
+                    {
+                        tedarikci.AlınacakTutar -= int.Parse(txtÖdeme.Text);
+                        otomasyonContext.SaveChanges();
+                        MessageBox.Show("Ödeme işlemi gerçekleşti.", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        TedarikciListele();
+                        Temizle();
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen işlemlerinizi kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Temizle();
+                    }
+                   
                 }
                 else
                 {
                     MessageBox.Show("Lütfen işlemlerinizi kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    Temizle();
                 }
-                Temizle();
 
             }
-            else
-            {
-                MessageBox.Show("Lütfen işlemlerinizi kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Temizle();
-            }
+         
 
         }
 

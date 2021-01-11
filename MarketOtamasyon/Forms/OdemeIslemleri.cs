@@ -38,6 +38,8 @@ namespace MarketOtamasyon.Forms
                 Soyad = x.MusteriSoyadi,
                 Borc = Math.Round(x.borc, 2),
             }).ToList();
+            lblAra.Visible = true;
+            txtAra.Visible = true;
 
         }
 
@@ -45,11 +47,16 @@ namespace MarketOtamasyon.Forms
        
         void Borc()
         {
-            if(lblId.Text != "") { 
-            int id = int.Parse(lblId.Text);
-            Musteri musteri = otomasyonContext.Musteris.Find(id);
-            lblToplam.Text = "Toplam Borç:";
-            lblBorc.Text = musteri.borc.ToString();
+            if (txtId.Text != "")
+            {
+                int id = int.Parse(txtId.Text);
+                var musteri = otomasyonContext.Musteris.Find(id);
+                if(Math.Round(musteri.borc, 2) <= 0)
+                {
+                    musteri.borc = 0;
+                }
+                lblToplam.Text = "Toplam Borç:";
+                lblBorc.Text = Math.Round(musteri.borc, 2).ToString();
             }
         }
 
@@ -66,8 +73,10 @@ namespace MarketOtamasyon.Forms
         {
             if (dataGridView1.Rows.Count != 0)
             {
-                lblId.Visible = false;
-                lblId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                lblAra.Visible = false;
+                txtAra.Visible = false;
+              
+                txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 txtAd.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 txtSoyad.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 var id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
@@ -96,26 +105,35 @@ namespace MarketOtamasyon.Forms
         private void btnOdeme_Click(object sender, EventArgs e)
         {
             Kayit();
-           if(lblId.Text != "" & txtÖdeme.Text !="")
+           if(txtId.Text != "" & txtÖdeme.Text !="" & txtAd.Text != "" & txtSoyad.Text!="")
             {
-                int id = int.Parse(lblId.Text);
-                Musteri musteri = otomasyonContext.Musteris.Find(id);
-
-                if (double.Parse(txtÖdeme.Text) <= musteri.borc)
+                int id = int.Parse(txtId.Text);
+                var musteri = otomasyonContext.Musteris.Find(id);
+                if (musteri != null)
                 {
-                    musteri.borc -= double.Parse(txtÖdeme.Text);
-                    otomasyonContext.SaveChanges();
-                    MessageBox.Show("Ödeme işlemi gerçekleşti.", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Borc();
-                    BorcListele();
-                    Temizle();
+                    if (double.Parse(txtÖdeme.Text) <= musteri.borc & musteri.MusteriAdi.Contains(txtAd.Text) & musteri.MusteriSoyadi.Contains(txtSoyad.Text))
+                    {
+                        musteri.borc -= double.Parse(txtÖdeme.Text);
+                        otomasyonContext.SaveChanges();
+                        MessageBox.Show("Ödeme işlemi gerçekleşti.", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Borc();
+                        BorcListele();
+                        Temizle();
+                        lblToplam.Text = "";
+                        lblBorc.Text = "";
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen ödenen tutarı kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Temizle();
+
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Lütfen ödenen tutarı kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Lütfen işlemlerinizi kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Temizle();
-
                 }
 
 
@@ -136,10 +154,10 @@ namespace MarketOtamasyon.Forms
             {
                 dataGridView1.DataSource = ara.Select(x => new
                 {
-                    x.MusteriId,
-                    x.MusteriAdi,
-                    x.MusteriSoyadi,
-                    Borc = Math.Round(x.borc,2),
+                    Id = x.MusteriId,
+                    Ad = x.MusteriAdi,
+                    Soyad = x.MusteriSoyadi,
+                    Borç = Math.Round(x.borc, 2),
                 }).ToList();
 
 
@@ -149,7 +167,7 @@ namespace MarketOtamasyon.Forms
         }
         void Temizle()
         {
-            lblId.Text = "";
+            txtId.Text = "";
             txtAd.Text = "";
             txtSoyad.Text = "";
             txtÖdeme.Text = "";
@@ -160,6 +178,8 @@ namespace MarketOtamasyon.Forms
             Temizle();
             BorcListele();
             Kayit();
+            lblToplam.Text = "";
+            lblBorc.Text = "";
         }
     }
 }

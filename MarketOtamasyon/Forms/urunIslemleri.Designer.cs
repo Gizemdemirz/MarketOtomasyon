@@ -41,11 +41,12 @@ namespace MarketOtamasyon.Forms
             this.lblSayı = new System.Windows.Forms.Label();
             this.lblMiktarSayı = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtBarkodNo = new System.Windows.Forms.TextBox();
-            this.lblMiktar = new System.Windows.Forms.Label();
-            this.txtMiktar = new System.Windows.Forms.TextBox();
-            this.lblAlıs = new System.Windows.Forms.Label();
             this.txtAlıs = new System.Windows.Forms.TextBox();
+            this.txtBarkodNo = new System.Windows.Forms.TextBox();
+            this.lblAlıs = new System.Windows.Forms.Label();
+            this.txtMiktar = new System.Windows.Forms.TextBox();
+            this.lblMiktar = new System.Windows.Forms.Label();
+            this.btnTemizle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,7 @@ namespace MarketOtamasyon.Forms
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(160, 407);
+            this.btnGuncelle.Location = new System.Drawing.Point(133, 256);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(99, 41);
             this.btnGuncelle.TabIndex = 25;
@@ -149,11 +150,13 @@ namespace MarketOtamasyon.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnTemizle);
             this.groupBox1.Controls.Add(this.txtAlıs);
             this.groupBox1.Controls.Add(this.txtSatıs);
             this.groupBox1.Controls.Add(this.txtBarkodNo);
             this.groupBox1.Controls.Add(this.lblAlıs);
             this.groupBox1.Controls.Add(this.lblSatıs);
+            this.groupBox1.Controls.Add(this.btnGuncelle);
             this.groupBox1.Controls.Add(this.txtMiktar);
             this.groupBox1.Controls.Add(this.txtÜrünAdı);
             this.groupBox1.Controls.Add(this.lblMiktar);
@@ -161,10 +164,18 @@ namespace MarketOtamasyon.Forms
             this.groupBox1.Controls.Add(this.lblBarkod);
             this.groupBox1.Location = new System.Drawing.Point(12, 144);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(247, 238);
+            this.groupBox1.Size = new System.Drawing.Size(247, 318);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
+            // 
+            // txtAlıs
+            // 
+            this.txtAlıs.Enabled = false;
+            this.txtAlıs.Location = new System.Drawing.Point(119, 156);
+            this.txtAlıs.Name = "txtAlıs";
+            this.txtAlıs.Size = new System.Drawing.Size(103, 22);
+            this.txtAlıs.TabIndex = 35;
             // 
             // txtBarkodNo
             // 
@@ -173,23 +184,6 @@ namespace MarketOtamasyon.Forms
             this.txtBarkodNo.Name = "txtBarkodNo";
             this.txtBarkodNo.Size = new System.Drawing.Size(103, 22);
             this.txtBarkodNo.TabIndex = 43;
-            // 
-            // lblMiktar
-            // 
-            this.lblMiktar.AutoSize = true;
-            this.lblMiktar.Location = new System.Drawing.Point(23, 117);
-            this.lblMiktar.Name = "lblMiktar";
-            this.lblMiktar.Size = new System.Drawing.Size(50, 17);
-            this.lblMiktar.TabIndex = 32;
-            this.lblMiktar.Text = "Miktar:";
-            // 
-            // txtMiktar
-            // 
-            this.txtMiktar.Enabled = false;
-            this.txtMiktar.Location = new System.Drawing.Point(119, 115);
-            this.txtMiktar.Name = "txtMiktar";
-            this.txtMiktar.Size = new System.Drawing.Size(103, 22);
-            this.txtMiktar.TabIndex = 33;
             // 
             // lblAlıs
             // 
@@ -200,13 +194,32 @@ namespace MarketOtamasyon.Forms
             this.lblAlıs.TabIndex = 34;
             this.lblAlıs.Text = "Alış Fiyatı:";
             // 
-            // txtAlıs
+            // txtMiktar
             // 
-            this.txtAlıs.Enabled = false;
-            this.txtAlıs.Location = new System.Drawing.Point(119, 156);
-            this.txtAlıs.Name = "txtAlıs";
-            this.txtAlıs.Size = new System.Drawing.Size(103, 22);
-            this.txtAlıs.TabIndex = 35;
+            this.txtMiktar.Enabled = false;
+            this.txtMiktar.Location = new System.Drawing.Point(119, 115);
+            this.txtMiktar.Name = "txtMiktar";
+            this.txtMiktar.Size = new System.Drawing.Size(103, 22);
+            this.txtMiktar.TabIndex = 33;
+            // 
+            // lblMiktar
+            // 
+            this.lblMiktar.AutoSize = true;
+            this.lblMiktar.Location = new System.Drawing.Point(23, 117);
+            this.lblMiktar.Name = "lblMiktar";
+            this.lblMiktar.Size = new System.Drawing.Size(50, 17);
+            this.lblMiktar.TabIndex = 32;
+            this.lblMiktar.Text = "Miktar:";
+            // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Location = new System.Drawing.Point(21, 256);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(99, 41);
+            this.btnTemizle.TabIndex = 44;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // urunIslemleri
             // 
@@ -219,7 +232,6 @@ namespace MarketOtamasyon.Forms
             this.Controls.Add(this.lblSayı);
             this.Controls.Add(this.lblAra);
             this.Controls.Add(this.txtAra);
-            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.dataGridView1);
             this.Name = "urunIslemleri";
             this.Text = "Ürün İşlemleri";
@@ -250,5 +262,6 @@ namespace MarketOtamasyon.Forms
         private System.Windows.Forms.Label lblAlıs;
         private System.Windows.Forms.TextBox txtMiktar;
         private System.Windows.Forms.Label lblMiktar;
+        private System.Windows.Forms.Button btnTemizle;
     }
 }

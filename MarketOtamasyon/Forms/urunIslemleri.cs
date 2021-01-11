@@ -128,5 +128,10 @@ namespace MarketOtamasyon.Forms
 
             }
         }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
     }
 }
