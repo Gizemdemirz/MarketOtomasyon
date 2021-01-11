@@ -426,5 +426,11 @@ namespace MarketOtamasyon
             SatısTrendi satısTrendi = new SatısTrendi();
             satısTrendi.ShowDialog();
         }
+
+        private void müşteriBazlıRaporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MusteriBazliRapor musteriBazliRapor = new MusteriBazliRapor();
+            musteriBazliRapor.ShowDialog();
+        }
     }
 }

@@ -60,6 +60,7 @@ namespace MarketOtamasyon
             this.satışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.satışSayfasıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.satışlarıListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.satışTrendiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tedarikçiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tedarikçiİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporlamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +71,7 @@ namespace MarketOtamasyon
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblToplamTutar = new System.Windows.Forms.Label();
             this.lblT = new System.Windows.Forms.Label();
-            this.satışTrendiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.müşteriBazlıRaporToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -357,15 +358,22 @@ namespace MarketOtamasyon
             // 
             this.satışSayfasıToolStripMenuItem.Enabled = false;
             this.satışSayfasıToolStripMenuItem.Name = "satışSayfasıToolStripMenuItem";
-            this.satışSayfasıToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.satışSayfasıToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
             this.satışSayfasıToolStripMenuItem.Text = "Satış Sayfası";
             // 
             // satışlarıListeleToolStripMenuItem
             // 
             this.satışlarıListeleToolStripMenuItem.Name = "satışlarıListeleToolStripMenuItem";
-            this.satışlarıListeleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.satışlarıListeleToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
             this.satışlarıListeleToolStripMenuItem.Text = "Satışları Listele";
             this.satışlarıListeleToolStripMenuItem.Click += new System.EventHandler(this.satışlarıListeleToolStripMenuItem_Click);
+            // 
+            // satışTrendiToolStripMenuItem
+            // 
+            this.satışTrendiToolStripMenuItem.Name = "satışTrendiToolStripMenuItem";
+            this.satışTrendiToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
+            this.satışTrendiToolStripMenuItem.Text = "Satış Trendi";
+            this.satışTrendiToolStripMenuItem.Click += new System.EventHandler(this.satışTrendiToolStripMenuItem_Click);
             // 
             // tedarikçiToolStripMenuItem
             // 
@@ -386,7 +394,8 @@ namespace MarketOtamasyon
             // 
             this.raporlamaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.raporToolStripMenuItem,
-            this.ürünBazlıRaporToolStripMenuItem});
+            this.ürünBazlıRaporToolStripMenuItem,
+            this.müşteriBazlıRaporToolStripMenuItem});
             this.raporlamaToolStripMenuItem.Name = "raporlamaToolStripMenuItem";
             this.raporlamaToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.raporlamaToolStripMenuItem.Text = "Raporlama";
@@ -394,14 +403,14 @@ namespace MarketOtamasyon
             // raporToolStripMenuItem
             // 
             this.raporToolStripMenuItem.Name = "raporToolStripMenuItem";
-            this.raporToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.raporToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.raporToolStripMenuItem.Text = "Toplu Müşteri Borç";
             this.raporToolStripMenuItem.Click += new System.EventHandler(this.raporToolStripMenuItem_Click);
             // 
             // ürünBazlıRaporToolStripMenuItem
             // 
             this.ürünBazlıRaporToolStripMenuItem.Name = "ürünBazlıRaporToolStripMenuItem";
-            this.ürünBazlıRaporToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.ürünBazlıRaporToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ürünBazlıRaporToolStripMenuItem.Text = "Ürün Bazlı Rapor";
             this.ürünBazlıRaporToolStripMenuItem.Click += new System.EventHandler(this.ürünBazlıRaporToolStripMenuItem_Click);
             // 
@@ -444,12 +453,12 @@ namespace MarketOtamasyon
             this.lblT.Size = new System.Drawing.Size(0, 17);
             this.lblT.TabIndex = 11;
             // 
-            // satışTrendiToolStripMenuItem
+            // müşteriBazlıRaporToolStripMenuItem
             // 
-            this.satışTrendiToolStripMenuItem.Name = "satışTrendiToolStripMenuItem";
-            this.satışTrendiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.satışTrendiToolStripMenuItem.Text = "Satış Trendi";
-            this.satışTrendiToolStripMenuItem.Click += new System.EventHandler(this.satışTrendiToolStripMenuItem_Click);
+            this.müşteriBazlıRaporToolStripMenuItem.Name = "müşteriBazlıRaporToolStripMenuItem";
+            this.müşteriBazlıRaporToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.müşteriBazlıRaporToolStripMenuItem.Text = "Müşteri Bazlı Rapor";
+            this.müşteriBazlıRaporToolStripMenuItem.Click += new System.EventHandler(this.müşteriBazlıRaporToolStripMenuItem_Click);
             // 
             // satisSayfasi
             // 
@@ -528,5 +537,6 @@ namespace MarketOtamasyon
         private System.Windows.Forms.ToolStripMenuItem tedarikçiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tedarikçiİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem satışTrendiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem müşteriBazlıRaporToolStripMenuItem;
     }
 }
