@@ -26,10 +26,10 @@ namespace MarketOtamasyon.Forms
             dataGridView1.DataSource = tedarikci.Select(x => new
             {
 
-                x.TedarikciId,
-                x.Ad,
-                x.AlınacakTutar,
-                
+                Tedarikçi_Id = x.TedarikciId,
+                Ad = x.Ad,
+                Borç = x.AlınacakTutar,
+
             }).ToList();
             Kayit();
 
@@ -67,19 +67,20 @@ namespace MarketOtamasyon.Forms
             if (txtID.Text != "" & txtÖdeme.Text != "")
             {
                 int id = int.Parse(txtID.Text);
-                Tedarikci tedarikci = otomasyonContext.Tedarikcis.Find(id);
+                var tedarikci = otomasyonContext.Tedarikcis.Find(id);
 
-                if (int.Parse(txtÖdeme.Text) <= tedarikci.AlınacakTutar)
+                if (double.Parse(txtÖdeme.Text) <= tedarikci.AlınacakTutar & tedarikci.Ad.Contains(txtAd.Text))
                 {
                     tedarikci.AlınacakTutar -= int.Parse(txtÖdeme.Text);
                     otomasyonContext.SaveChanges();
                     MessageBox.Show("Ödeme işlemi gerçekleşti.", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     TedarikciListele();
-                    
+                    Temizle();
+
                 }
                 else
                 {
-                    MessageBox.Show("Lütfen ödenen tutarı kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Lütfen işlemlerinizi kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
                 Temizle();
@@ -87,7 +88,7 @@ namespace MarketOtamasyon.Forms
             }
             else
             {
-                MessageBox.Show("Lütfen işlemlerinizi kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lütfen işlemlerinizi kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Temizle();
             }
 
@@ -101,9 +102,9 @@ namespace MarketOtamasyon.Forms
                 {
                         dataGridView1.DataSource = ara.Where(x => x.Ad.Contains(txtAra.Text)).Select(x => new
                         {
-                            x.TedarikciId,
-                            x.Ad,
-                            x.AlınacakTutar,
+                            Tedarikçi_Id = x.TedarikciId,
+                            Ad = x.Ad,
+                            Alınacak_Tutar = x.AlınacakTutar,
 
                         }).ToList();
                         Kayit();

@@ -40,7 +40,7 @@ namespace MarketOtamasyon.Forms
                 AdSoyad = x.MusteriAdi + " " + x.MusteriSoyadi,
                 ToplamSatis = x.Satis.Count(),
                 ToplamÖdeme = x.Satis.Sum(y=> y.tutar) - x.borc,
-                KalanBorc = x.borc
+                KalanBorc =  Math.Round(x.borc, 2),
 
             }).Distinct().ToList() ;
         

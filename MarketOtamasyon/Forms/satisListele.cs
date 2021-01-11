@@ -40,12 +40,12 @@ namespace MarketOtamasyon.Forms
         {
             dataGridView1.DataSource = otomasyonContext.Satis.Select(x => new
             {
-                x.SatisId,
-                x.UrunBarkodNo,
-                x.UrunAdi,
-                x.UrunMiktarı,
-                x.tutar,
-                x.SatisTarihi
+                Satış_Id = x.SatisId,
+                Barkod_No = x.UrunBarkodNo,
+                Ürün_Adı = x.UrunAdi,
+                Miktar = x.UrunMiktarı,
+                Tutar = x.tutar,
+                Satış_Tarihi = x.SatisTarihi
             }).ToList();
         }
         void CariSatisListele()
@@ -56,13 +56,13 @@ namespace MarketOtamasyon.Forms
                        select y;
             dataGridView1.DataSource = cari.Select(x => new
             {
-                x.SatisId,
-                x.Musteri.MusteriId,
-                x.UrunBarkodNo,
-                x.UrunAdi,
-                x.UrunMiktarı,
-                x.tutar,
-                x.SatisTarihi
+                Satış_Id = x.SatisId,
+                Müşteri_Id = x.Musteri.MusteriId,
+                Barkod_No = x.UrunBarkodNo,
+                Ürün_Adı = x.UrunAdi,
+                Miktar = x.UrunMiktarı,
+                Tutar = x.tutar,
+                Satış_Tarihi = x.SatisTarihi
             }
                 ).ToList();
 

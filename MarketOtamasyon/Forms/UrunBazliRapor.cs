@@ -27,9 +27,9 @@ namespace MarketOtamasyon.Forms
            
             dataGridView1.DataSource = otomasyonContext.Uruns.Select(x => new
             {
-                x.UrunAdi,
-                x.alisFiyati,
-                x.satisFiyati,
+                Ürün_Adı = x.UrunAdi,
+                Alış_Fiyatı = x.alisFiyati,
+                Satış_Fiyatı = x.satisFiyati,
                 Kar = (int)(((double)(x.satisFiyati - x.alisFiyati) / x.alisFiyati) * 100)
             }).ToList();
 

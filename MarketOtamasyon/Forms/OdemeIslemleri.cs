@@ -21,7 +21,9 @@ namespace MarketOtamasyon.Forms
         OtomasyonContext otomasyonContext = new OtomasyonContext();
         private void OdemeIslemleri_Load(object sender, EventArgs e)
         {
-
+            BorcListele();
+            Kayit();
+           
         }
 
 
@@ -30,23 +32,17 @@ namespace MarketOtamasyon.Forms
             var borclu = from x in otomasyonContext.Musteris where x.borc != 0 select x;
             dataGridView1.DataSource = borclu.Select(x => new
             {
-                
-                x.MusteriId,
-                x.MusteriAdi,
-                x.MusteriSoyadi,
-                x.borc
+
+                Id = x.MusteriId,
+                Ad = x.MusteriAdi,
+                Soyad = x.MusteriSoyadi,
+                Borc = Math.Round(x.borc, 2),
             }).ToList();
 
         }
 
      
-        private void btnBorç_Click(object sender, EventArgs e)
-        {
-            BorcListele();
-            Kayit();
-          
-        }
-
+       
         void Borc()
         {
             if(lblId.Text != "") { 
@@ -56,12 +52,15 @@ namespace MarketOtamasyon.Forms
             lblBorc.Text = musteri.borc.ToString();
             }
         }
+
+
         void Kayit()
         {
             var kayit = dataGridView1.Rows.Count;
             lblKayit.Text = "Kayıt sayısı:";
             lblKytsyi.Text = kayit.ToString();
         }
+
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
 
         {
@@ -80,10 +79,10 @@ namespace MarketOtamasyon.Forms
                 
                 dataGridView1.DataSource = detay.Select(x => new
                 {
-                    x.Musteri.MusteriAdi,
-                    x.Musteri.MusteriSoyadi,
-                    x.tutar,
-                    x.SatisTarihi
+                    Ad = x.Musteri.MusteriAdi,
+                    Soyad = x.Musteri.MusteriSoyadi,
+                    Tutar = x.tutar,
+                    Satış_Fiyatı = x.SatisTarihi
 
                 }).ToList();
                 Borc();
@@ -130,21 +129,20 @@ namespace MarketOtamasyon.Forms
 
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count != 0)
-            {
+           
 
                 var ara = from musteri in otomasyonContext.Musteris where musteri.borc != 0 & (musteri.MusteriAdi.Contains(txtAra.Text) || musteri.MusteriSoyadi.Contains(txtAra.Text)) select musteri;
-                if (txtAra.Text != null)
+            if (txtAra.Text != null)
+            {
+                dataGridView1.DataSource = ara.Select(x => new
                 {
-                    dataGridView1.DataSource = ara.Select(x => new
-                    {
-                        x.MusteriId,
-                        x.MusteriAdi,
-                        x.MusteriSoyadi,
-                        x.borc
-                    }).ToList();
+                    x.MusteriId,
+                    x.MusteriAdi,
+                    x.MusteriSoyadi,
+                    Borc = Math.Round(x.borc,2),
+                }).ToList();
 
-                }
+
             }
                 
             
@@ -155,6 +153,13 @@ namespace MarketOtamasyon.Forms
             txtAd.Text = "";
             txtSoyad.Text = "";
             txtÖdeme.Text = "";
+        }
+
+        private void btnListele_Click(object sender, EventArgs e)
+        {
+            Temizle();
+            BorcListele();
+            Kayit();
         }
     }
 }

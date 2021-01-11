@@ -23,10 +23,10 @@ namespace MarketOtamasyon.Forms
         {
             dataGridView1.DataSource = otomasyonContext.Musteris.Select(x => new
             {
-                x.MusteriId,
-                x.MusteriAdi,
-                x.MusteriSoyadi,
-                x.borc
+                Id = x.MusteriId,
+                Ad = x.MusteriAdi,
+                Soyad = x.MusteriSoyadi,
+                Borç = Math.Round(x.borc, 2),
             }).ToList();
         }
         private void MusteriListele_Load(object sender, EventArgs e)
@@ -124,16 +124,19 @@ namespace MarketOtamasyon.Forms
 
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
-            var ara = from musteri in otomasyonContext.Musteris where musteri.MusteriAdi.Contains(txtAra.Text) || musteri.MusteriSoyadi.Contains(txtAra.Text) select musteri;
+            
+         
+             var ara = from musteri in otomasyonContext.Musteris where musteri.MusteriAdi.Contains(txtAra.Text) || musteri.MusteriSoyadi.Contains(txtAra.Text) select musteri;
             if (txtAra.Text != null)
             {
-                dataGridView1.DataSource = ara.Select(x=> new
+                dataGridView1.DataSource = ara.Select(x => new
                 {
-                    x.MusteriId,
-                    x.MusteriAdi,
-                    x.MusteriSoyadi,
-                    x.borc
+                    Id = x.MusteriId,
+                    Ad = x.MusteriAdi,
+                    Soyad = x.MusteriSoyadi,
+                    Borç = Math.Round(x.borc, 2),
                 }).ToList();
+
 
             }
         }

@@ -64,10 +64,10 @@ namespace MarketOtamasyon
             var liste = from x in otomasyonContext.Sepet
                         select new
                         {
-                            x.UrunBarkodNo,
-                            x.UrunAdi,
-                            x.miktar,
-                            x.tutar,
+                            Barkod_No = x.UrunBarkodNo,
+                            Ürün_Adı = x.UrunAdi,
+                            Miktar = x.miktar,
+                            Tutar = x.tutar,
                         };
             dataGridView1.DataSource = liste.ToList();
 

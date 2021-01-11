@@ -23,9 +23,9 @@ namespace MarketOtamasyon.Forms
         {
             dataGridView1.DataSource = otomasyonContext.Musteris.Select(x => new
             {
-                x.MusteriId,
-                x.MusteriAdi,
-                x.MusteriSoyadi
+                Id = x.MusteriId,
+                Ad = x.MusteriAdi,
+                Soyad = x.MusteriSoyadi
             }).ToList();
         }
         private void MusteriBazliRapor_Load(object sender, EventArgs e)
@@ -53,9 +53,9 @@ namespace MarketOtamasyon.Forms
 
                 dataGridView1.DataSource = nolur.Select(x => new
                 {
-                    x.UrunAdi,
-                    x.UrunMiktarı,
-                    x.tutar
+                    Ürün_Adı = x.UrunAdi,
+                    Miktar = x.UrunMiktarı,
+                    Tutar = x.tutar
                 }).ToList();
 
 

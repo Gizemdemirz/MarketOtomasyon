@@ -23,14 +23,14 @@ namespace MarketOtamasyon.Forms
 
             dataGridView1.DataSource = otomasyonContext.Satis.Select(x => new
             {
-                x.UrunBarkodNo,
-                x.tutar,
-                x.SatisTarihi
+                Barkod_No = x.UrunBarkodNo,
+                Tutar = x.tutar,
+                Satış_Tarihi = x.SatisTarihi
             }).ToList();
-           grafik();
+           Grafik();
         }
 
-        void grafik()
+        void Grafik()
         {
             chart1.Series["Satış"].Points.Clear();
             dataGridView1.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
@@ -49,11 +49,11 @@ namespace MarketOtamasyon.Forms
                       select x;
             dataGridView1.DataSource = bul.Select(x => new
             {
-                x.UrunBarkodNo,
-                x.tutar,
-                x.SatisTarihi
+                Barkod_No = x.UrunBarkodNo,
+                Tutar = x.tutar,
+                Satış_Tarihi = x.SatisTarihi
             }).ToList();
-            grafik();
+            Grafik();
         }
     }
 }

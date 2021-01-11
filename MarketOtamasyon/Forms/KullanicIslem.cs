@@ -45,7 +45,7 @@ namespace MarketOtamasyon.Forms
                 }
                 otomasyonContext.SaveChanges();
                 Temizle();
-                dataGridView1.DataSource = otomasyonContext.Kullanicis.ToList();
+                KullanıcıListele();
             }
         }
 
@@ -73,7 +73,7 @@ namespace MarketOtamasyon.Forms
                 otomasyonContext.SaveChanges();
                 MessageBox.Show("Kullanıcı bilgileri güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Temizle();
-                dataGridView1.DataSource = otomasyonContext.Kullanicis.ToList();
+                KullanıcıListele();
             }
         }
 
@@ -87,14 +87,24 @@ namespace MarketOtamasyon.Forms
                 otomasyonContext.SaveChanges();
                 MessageBox.Show("Kullanıcı silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Temizle();
-                dataGridView1.DataSource = otomasyonContext.Kullanicis.ToList();
+                KullanıcıListele();
             }
             
         }
 
+        void KullanıcıListele()
+        {
+            dataGridView1.DataSource = otomasyonContext.Kullanicis.Select(x => new
+            {
+
+                Kullanıcı_Adı = x.KullaniciAdi,
+                Şifre = x.Sifre,
+                Son_Giriş_Tarihi = x.sonGirisTarihi
+            }).ToList();
+        }
         private void KullanicIslem_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = otomasyonContext.Kullanicis.ToList();
+            KullanıcıListele();
         }
     }
 }

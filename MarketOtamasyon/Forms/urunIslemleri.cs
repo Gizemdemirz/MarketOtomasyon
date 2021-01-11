@@ -23,12 +23,12 @@ namespace MarketOtamasyon.Forms
         {
             dataGridView1.DataSource = otomasyonContext.Uruns.Select(x => new
             {
-                x.UrunId,
-                x.barkodNo,
-                x.UrunAdi,
-                x.miktar,
-                x.alisFiyati,
-                x.satisFiyati
+                Id = x.UrunId,
+                Barkod_No = x.barkodNo,
+                Ürün_Adı = x.UrunAdi,
+                Miktar = x.miktar,
+                Alış_Fiyatı = x.alisFiyati,
+                Satış_Fiyatı = x.satisFiyati
             }).ToList();
         }
         private void urunIslemleri_Load(object sender, EventArgs e)
@@ -90,21 +90,23 @@ namespace MarketOtamasyon.Forms
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            try {
-            var ID = dataGridView1.CurrentRow.Cells[0].Value;
-            var urun = otomasyonContext.Uruns.FirstOrDefault(x => x.UrunId.ToString() == ID.ToString());
-            urun.barkodNo = int.Parse(txtBarkodNo.Text);
-            urun.UrunAdi = txtÜrünAdı.Text;
-            urun.satisFiyati = double.Parse(txtSatıs.Text);
-            otomasyonContext.SaveChanges();
-            MessageBox.Show("Kayıt güncellendi.", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Temizle();
+            try
+            {
+                var ID = dataGridView1.CurrentRow.Cells[0].Value;
+                var urun = otomasyonContext.Uruns.FirstOrDefault(x => x.UrunId.ToString() == ID.ToString());
+                urun.barkodNo = int.Parse(txtBarkodNo.Text);
+                urun.UrunAdi = txtÜrünAdı.Text;
+                urun.satisFiyati = double.Parse(txtSatıs.Text);
+                otomasyonContext.SaveChanges();
+                MessageBox.Show("Kayıt güncellendi.", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Temizle();
                 Listele();
                 Kayıt();
             }
             catch
             {
-                MessageBox.Show("Lütfen girdiğiniz bilgileri kontrol edin","Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Temizle();
+                MessageBox.Show("Lütfen girdiğiniz bilgileri kontrol edin", "Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -116,12 +118,12 @@ namespace MarketOtamasyon.Forms
             {
                 dataGridView1.DataSource = ara.Where(urun => urun.barkodNo.ToString().Contains(txtAra.Text)).Select(x=> new
                 {
-                    x.UrunId,
-                    x.barkodNo,
-                    x.UrunAdi,
-                    x.miktar,
-                    x.alisFiyati,
-                    x.satisFiyati
+                    Id = x.UrunId,
+                    Barkod_No = x.barkodNo,
+                    Ürün_Adı = x.UrunAdi,
+                    Miktar = x.miktar,
+                    Alış_Fiyatı = x.alisFiyati,
+                    Satış_Fiyatı = x.satisFiyati
                 }).ToList();
 
             }
