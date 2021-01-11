@@ -44,8 +44,8 @@ namespace MarketOtamasyon.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.txtTAdı = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
             this.grpboxOdeme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -191,16 +191,6 @@ namespace MarketOtamasyon.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tedarikçi Ekle";
             // 
-            // btnEkle
-            // 
-            this.btnEkle.Location = new System.Drawing.Point(10, 97);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(90, 35);
-            this.btnEkle.TabIndex = 4;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
-            // 
             // btnSil
             // 
             this.btnSil.Location = new System.Drawing.Point(123, 97);
@@ -210,6 +200,16 @@ namespace MarketOtamasyon.Forms
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnEkle
+            // 
+            this.btnEkle.Location = new System.Drawing.Point(10, 97);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(90, 35);
+            this.btnEkle.TabIndex = 4;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // TedarikciIslemleri
             // 
@@ -224,7 +224,7 @@ namespace MarketOtamasyon.Forms
             this.Controls.Add(this.lblAra);
             this.Controls.Add(this.dataGridView1);
             this.Name = "TedarikciIslemleri";
-            this.Text = "TedarikciIslemleri";
+            this.Text = "Tedarikçi İşlemleri";
             this.Load += new System.EventHandler(this.TedarikciIslemleri_Load);
             this.grpboxOdeme.ResumeLayout(false);
             this.grpboxOdeme.PerformLayout();

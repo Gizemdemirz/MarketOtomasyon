@@ -120,7 +120,7 @@ namespace MarketOtamasyon.Forms
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "stok";
-            this.Text = "stok";
+            this.Text = "Stok";
             this.Load += new System.EventHandler(this.stok_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
