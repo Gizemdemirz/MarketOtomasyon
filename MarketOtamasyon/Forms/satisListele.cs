@@ -38,7 +38,19 @@ namespace MarketOtamasyon.Forms
 
         void SatisListele()
         {
-            dataGridView1.DataSource = otomasyonContext.Satis.Select(x => new
+            var listele = otomasyonContext.Database.SqlQuery<Satis>("MarketOtomasyon").ToList();
+
+            dataGridView1.DataSource = listele.Select(x =>  new {
+
+                Satıs_Id = x.SatisId,
+                Barkod_No = x.UrunBarkodNo,
+                Ürün_Adı = x.UrunAdi,
+                Miktar = x.UrunMiktarı,
+                Tutar = x.tutar,
+                Satış_Tarihi = x.SatisTarihi
+
+            }).ToList();
+            /*dataGridView1.DataSource = otomasyonContext.Satis.Select(x => new
             {
                 Satış_Id = x.SatisId,
                 Barkod_No = x.UrunBarkodNo,
@@ -46,7 +58,7 @@ namespace MarketOtamasyon.Forms
                 Miktar = x.UrunMiktarı,
                 Tutar = x.tutar,
                 Satış_Tarihi = x.SatisTarihi
-            }).ToList();
+            }).ToList();*/
         }
         void CariSatisListele()
         {

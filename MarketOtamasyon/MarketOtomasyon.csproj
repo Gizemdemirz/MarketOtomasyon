@@ -228,6 +228,10 @@
     <Compile Include="Migrations\202012222244490_InitialCreate.designer.cs">
       <DependentUpon>202012222244490_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101122132521_SatısListele.cs" />
+    <Compile Include="Migrations\202101122132521_SatısListele.designer.cs">
+      <DependentUpon>202101122132521_SatısListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -284,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012222244490_InitialCreate.resx">
       <DependentUpon>202012222244490_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101122132521_SatısListele.resx">
+      <DependentUpon>202101122132521_SatısListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="satisSayfasi.resx">
       <DependentUpon>satisSayfasi.cs</DependentUpon>
