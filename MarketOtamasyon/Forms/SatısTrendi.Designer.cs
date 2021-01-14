@@ -29,9 +29,9 @@ namespace MarketOtamasyon.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.BasTarih = new System.Windows.Forms.DateTimePicker();
@@ -56,17 +56,17 @@ namespace MarketOtamasyon.Forms
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(583, 123);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "Satış";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Satış";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(466, 438);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -87,12 +87,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnFiltrele
             // 
+            this.btnFiltrele.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnFiltrele.Location = new System.Drawing.Point(404, 38);
             this.btnFiltrele.Name = "btnFiltrele";
             this.btnFiltrele.Size = new System.Drawing.Size(96, 33);
             this.btnFiltrele.TabIndex = 4;
             this.btnFiltrele.Text = "Filtrele";
-            this.btnFiltrele.UseVisualStyleBackColor = true;
+            this.btnFiltrele.UseVisualStyleBackColor = false;
             this.btnFiltrele.Click += new System.EventHandler(this.btnFiltrele_Click);
             // 
             // label1

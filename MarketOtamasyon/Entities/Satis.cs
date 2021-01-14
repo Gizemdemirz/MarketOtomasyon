@@ -14,7 +14,7 @@ namespace MarketOtamasyon.Entities
         public int UrunMiktarı { get; set; }
         public double tutar { get; set; }
         public DateTime SatisTarihi { get; set; }
-       public virtual Musteri Musteri { get; set; }
+        public virtual Musteri Musteri { get; set; }
         public virtual Sepet Sepet { get; set; }
         
 

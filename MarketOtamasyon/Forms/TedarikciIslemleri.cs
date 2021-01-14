@@ -72,7 +72,7 @@ namespace MarketOtamasyon.Forms
                 {
                     if (double.Parse(txtÖdeme.Text) <= tedarikci.AlınacakTutar & tedarikci.Ad.Contains(txtAd.Text))
                     {
-                        tedarikci.AlınacakTutar -= int.Parse(txtÖdeme.Text);
+                        tedarikci.AlınacakTutar -= double.Parse(txtÖdeme.Text);
                         otomasyonContext.SaveChanges();
                         MessageBox.Show("Ödeme işlemi gerçekleşti.", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TedarikciListele();

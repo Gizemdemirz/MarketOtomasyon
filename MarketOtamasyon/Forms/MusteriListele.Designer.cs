@@ -41,7 +41,9 @@ namespace MarketOtamasyon.Forms
             this.btnEkle = new System.Windows.Forms.Button();
             this.lblKayıt = new System.Windows.Forms.Label();
             this.lblBorc = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -49,27 +51,28 @@ namespace MarketOtamasyon.Forms
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(191, 103);
+            this.dataGridView1.Location = new System.Drawing.Point(218, 117);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(581, 269);
+            this.dataGridView1.Size = new System.Drawing.Size(608, 296);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(797, 179);
+            this.btnGuncelle.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnGuncelle.Location = new System.Drawing.Point(845, 215);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(99, 41);
             this.btnGuncelle.TabIndex = 13;
             this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(82, 205);
+            this.txtSoyad.Location = new System.Drawing.Point(75, 75);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(103, 22);
             this.txtSoyad.TabIndex = 12;
@@ -77,7 +80,7 @@ namespace MarketOtamasyon.Forms
             // lblSoyad
             // 
             this.lblSoyad.AutoSize = true;
-            this.lblSoyad.Location = new System.Drawing.Point(9, 211);
+            this.lblSoyad.Location = new System.Drawing.Point(2, 81);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(52, 17);
             this.lblSoyad.TabIndex = 10;
@@ -85,17 +88,18 @@ namespace MarketOtamasyon.Forms
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(797, 234);
+            this.btnSil.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSil.Location = new System.Drawing.Point(845, 270);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(99, 41);
             this.btnSil.TabIndex = 14;
             this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // txtAra
             // 
-            this.txtAra.Location = new System.Drawing.Point(326, 49);
+            this.txtAra.Location = new System.Drawing.Point(311, 64);
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(124, 22);
             this.txtAra.TabIndex = 15;
@@ -104,7 +108,7 @@ namespace MarketOtamasyon.Forms
             // lblAra
             // 
             this.lblAra.AutoSize = true;
-            this.lblAra.Location = new System.Drawing.Point(215, 52);
+            this.lblAra.Location = new System.Drawing.Point(210, 64);
             this.lblAra.Name = "lblAra";
             this.lblAra.Size = new System.Drawing.Size(84, 17);
             this.lblAra.TabIndex = 16;
@@ -113,7 +117,7 @@ namespace MarketOtamasyon.Forms
             // lblAd
             // 
             this.lblAd.AutoSize = true;
-            this.lblAd.Location = new System.Drawing.Point(10, 176);
+            this.lblAd.Location = new System.Drawing.Point(3, 46);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(32, 17);
             this.lblAd.TabIndex = 9;
@@ -121,19 +125,20 @@ namespace MarketOtamasyon.Forms
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(82, 176);
+            this.txtAd.Location = new System.Drawing.Point(75, 46);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(103, 22);
             this.txtAd.TabIndex = 11;
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(797, 128);
+            this.btnEkle.BackColor = System.Drawing.Color.LightGreen;
+            this.btnEkle.Location = new System.Drawing.Point(845, 164);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(99, 41);
             this.btnEkle.TabIndex = 17;
             this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // lblKayıt
@@ -152,12 +157,27 @@ namespace MarketOtamasyon.Forms
             this.lblBorc.Size = new System.Drawing.Size(0, 17);
             this.lblBorc.TabIndex = 20;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBox1.Controls.Add(this.txtSoyad);
+            this.groupBox1.Controls.Add(this.txtAd);
+            this.groupBox1.Controls.Add(this.lblAd);
+            this.groupBox1.Controls.Add(this.lblSoyad);
+            this.groupBox1.Location = new System.Drawing.Point(12, 174);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(195, 150);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Müşteri İşlemleri";
+            // 
             // MusteriListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(917, 455);
+            this.ClientSize = new System.Drawing.Size(965, 494);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblBorc);
             this.Controls.Add(this.lblKayıt);
             this.Controls.Add(this.btnEkle);
@@ -165,16 +185,14 @@ namespace MarketOtamasyon.Forms
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
-            this.Controls.Add(this.txtSoyad);
-            this.Controls.Add(this.txtAd);
-            this.Controls.Add(this.lblAd);
-            this.Controls.Add(this.lblSoyad);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MusteriListele";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Müşteri İşlemleri";
             this.Load += new System.EventHandler(this.MusteriListele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +212,6 @@ namespace MarketOtamasyon.Forms
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Label lblKayıt;
         private System.Windows.Forms.Label lblBorc;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -50,42 +50,46 @@ namespace MarketOtamasyon.Forms
             // 
             // btnSatislar
             // 
+            this.btnSatislar.BackColor = System.Drawing.Color.LightGreen;
             this.btnSatislar.Location = new System.Drawing.Point(834, 107);
             this.btnSatislar.Name = "btnSatislar";
             this.btnSatislar.Size = new System.Drawing.Size(109, 61);
             this.btnSatislar.TabIndex = 1;
             this.btnSatislar.Text = "Satışları Listele";
-            this.btnSatislar.UseVisualStyleBackColor = true;
+            this.btnSatislar.UseVisualStyleBackColor = false;
             this.btnSatislar.Click += new System.EventHandler(this.btnSatislar_Click);
             // 
             // btnCariSatis
             // 
+            this.btnCariSatis.BackColor = System.Drawing.Color.SandyBrown;
             this.btnCariSatis.Location = new System.Drawing.Point(834, 189);
             this.btnCariSatis.Name = "btnCariSatis";
             this.btnCariSatis.Size = new System.Drawing.Size(109, 61);
             this.btnCariSatis.TabIndex = 2;
             this.btnCariSatis.Text = "Cari Satışlar";
-            this.btnCariSatis.UseVisualStyleBackColor = true;
+            this.btnCariSatis.UseVisualStyleBackColor = false;
             this.btnCariSatis.Click += new System.EventHandler(this.btnCariSatis_Click);
             // 
             // btnSatisIptal
             // 
+            this.btnSatisIptal.BackColor = System.Drawing.Color.IndianRed;
             this.btnSatisIptal.Location = new System.Drawing.Point(834, 362);
             this.btnSatisIptal.Name = "btnSatisIptal";
             this.btnSatisIptal.Size = new System.Drawing.Size(109, 61);
             this.btnSatisIptal.TabIndex = 3;
             this.btnSatisIptal.Text = "Satış İptal";
-            this.btnSatisIptal.UseVisualStyleBackColor = true;
+            this.btnSatisIptal.UseVisualStyleBackColor = false;
             this.btnSatisIptal.Click += new System.EventHandler(this.btnSatisIptal_Click);
             // 
             // btnCokSatan
             // 
+            this.btnCokSatan.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnCokSatan.Location = new System.Drawing.Point(834, 271);
             this.btnCokSatan.Name = "btnCokSatan";
             this.btnCokSatan.Size = new System.Drawing.Size(109, 61);
             this.btnCokSatan.TabIndex = 5;
             this.btnCokSatan.Text = "Çok Satanlar";
-            this.btnCokSatan.UseVisualStyleBackColor = true;
+            this.btnCokSatan.UseVisualStyleBackColor = false;
             this.btnCokSatan.Click += new System.EventHandler(this.btnCokSatan_Click);
             // 
             // satisListele

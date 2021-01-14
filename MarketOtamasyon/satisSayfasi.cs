@@ -235,14 +235,15 @@ namespace MarketOtamasyon
         {
             try
             {
-                if (dataGridView1.Rows.Count != 0) { 
-                var barkodNo = dataGridView1.CurrentRow.Cells[0].Value;
-                var urun = otomasyonContext.Sepet.FirstOrDefault(x => x.UrunBarkodNo.ToString() == barkodNo.ToString());
-                otomasyonContext.Sepet.Remove(urun);
-                otomasyonContext.SaveChanges();
-                MessageBox.Show("Ürün sepetten çıkarıldı.", "Sepet", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                SepetListele();
-                Tutar();
+                if (dataGridView1.Rows.Count != 0)
+                {
+                    var barkodNo = dataGridView1.CurrentRow.Cells[0].Value;
+                    var urun = otomasyonContext.Sepet.FirstOrDefault(x => x.UrunBarkodNo.ToString() == barkodNo.ToString());
+                    otomasyonContext.Sepet.Remove(urun);
+                    otomasyonContext.SaveChanges();
+                    MessageBox.Show("Ürün sepetten çıkarıldı.", "Sepet", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SepetListele();
+                    Tutar();
                 }
                 else
                 {
@@ -318,18 +319,13 @@ namespace MarketOtamasyon
 
                         musteri.Satis.Add(new Satis
                         {
-
                             UrunBarkodNo = int.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString()),
                             UrunAdi = dataGridView1.Rows[i].Cells[1].Value.ToString(),
                             UrunMiktarı = int.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()),
                             tutar = double.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString()),
                             SatisTarihi = DateTime.Now,
-                           
-
 
                         });
-                      
-                        
 
                     }
                     musteri.borc += double.Parse(lblToplamTutar.Text);

@@ -126,7 +126,9 @@ namespace MarketOtamasyon.Forms
         {
             
          
-             var ara = from musteri in otomasyonContext.Musteris where musteri.MusteriAdi.Contains(txtAra.Text) || musteri.MusteriSoyadi.Contains(txtAra.Text) select musteri;
+             var ara = from musteri in otomasyonContext.Musteris 
+             where musteri.MusteriAdi.Contains(txtAra.Text) || musteri.MusteriSoyadi.Contains(txtAra.Text) 
+                       select musteri;
             if (txtAra.Text != null)
             {
                 dataGridView1.DataSource = ara.Select(x => new

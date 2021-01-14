@@ -44,12 +44,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnOnay
             // 
+            this.btnOnay.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnOnay.Location = new System.Drawing.Point(165, 158);
             this.btnOnay.Name = "btnOnay";
             this.btnOnay.Size = new System.Drawing.Size(103, 48);
             this.btnOnay.TabIndex = 1;
             this.btnOnay.Text = "Onayla";
-            this.btnOnay.UseVisualStyleBackColor = true;
+            this.btnOnay.UseVisualStyleBackColor = false;
             this.btnOnay.Click += new System.EventHandler(this.btnOnay_Click);
             // 
             // label1

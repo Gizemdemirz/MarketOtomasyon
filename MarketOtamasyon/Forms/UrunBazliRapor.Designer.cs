@@ -67,12 +67,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnPdf
             // 
+            this.btnPdf.BackColor = System.Drawing.Color.IndianRed;
             this.btnPdf.Location = new System.Drawing.Point(145, 602);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(107, 47);
             this.btnPdf.TabIndex = 2;
             this.btnPdf.Text = "Pdf\'e Aktar";
-            this.btnPdf.UseVisualStyleBackColor = true;
+            this.btnPdf.UseVisualStyleBackColor = false;
             this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
             // 
             // UrunBazliRapor
@@ -80,7 +81,7 @@ namespace MarketOtamasyon.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1175, 734);
+            this.ClientSize = new System.Drawing.Size(1162, 660);
             this.Controls.Add(this.btnPdf);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chart1);

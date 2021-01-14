@@ -40,6 +40,7 @@ namespace MarketOtamasyon.Forms
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(34, 61);
             this.dataGridView1.Name = "dataGridView1";
@@ -50,45 +51,49 @@ namespace MarketOtamasyon.Forms
             // 
             // btnBorc
             // 
+            this.btnBorc.BackColor = System.Drawing.Color.SandyBrown;
             this.btnBorc.Location = new System.Drawing.Point(731, 90);
             this.btnBorc.Name = "btnBorc";
             this.btnBorc.Size = new System.Drawing.Size(116, 60);
             this.btnBorc.TabIndex = 1;
             this.btnBorc.Text = "Borç Raporu";
-            this.btnBorc.UseVisualStyleBackColor = true;
+            this.btnBorc.UseVisualStyleBackColor = false;
             this.btnBorc.Click += new System.EventHandler(this.btnBorc_Click);
             // 
             // btnExcel
             // 
+            this.btnExcel.BackColor = System.Drawing.Color.LightGreen;
             this.btnExcel.Location = new System.Drawing.Point(731, 192);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(116, 60);
             this.btnExcel.TabIndex = 2;
             this.btnExcel.Text = "Excele Aktar";
-            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.UseVisualStyleBackColor = false;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnPdf
             // 
+            this.btnPdf.BackColor = System.Drawing.Color.IndianRed;
             this.btnPdf.Location = new System.Drawing.Point(731, 294);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(116, 60);
             this.btnPdf.TabIndex = 3;
             this.btnPdf.Text = "Pdf\'e Aktar";
-            this.btnPdf.UseVisualStyleBackColor = true;
+            this.btnPdf.UseVisualStyleBackColor = false;
             this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
             // 
             // btnWord
             // 
+            this.btnWord.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnWord.Location = new System.Drawing.Point(731, 396);
             this.btnWord.Name = "btnWord";
             this.btnWord.Size = new System.Drawing.Size(116, 60);
             this.btnWord.TabIndex = 4;
             this.btnWord.Text = "Word\'e Aktar";
-            this.btnWord.UseVisualStyleBackColor = true;
+            this.btnWord.UseVisualStyleBackColor = false;
             this.btnWord.Click += new System.EventHandler(this.btnWord_Click);
             // 
-            // Rapor
+            // TopluBorc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,7 +104,7 @@ namespace MarketOtamasyon.Forms
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.btnBorc);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Rapor";
+            this.Name = "TopluBorc";
             this.Text = "Rapor";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

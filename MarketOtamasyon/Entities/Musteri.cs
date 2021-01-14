@@ -15,7 +15,7 @@ namespace MarketOtamasyon.Entities
 
         public double borc { get; set; }
       
-     public virtual ICollection<Satis> Satis { get; set; }
+        public virtual ICollection<Satis> Satis { get; set; }
       
     }
 }

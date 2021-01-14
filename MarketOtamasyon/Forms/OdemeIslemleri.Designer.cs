@@ -114,7 +114,7 @@ namespace MarketOtamasyon.Forms
             // lblAra
             // 
             this.lblAra.AutoSize = true;
-            this.lblAra.Location = new System.Drawing.Point(271, 35);
+            this.lblAra.Location = new System.Drawing.Point(291, 46);
             this.lblAra.Name = "lblAra";
             this.lblAra.Size = new System.Drawing.Size(84, 17);
             this.lblAra.TabIndex = 2;
@@ -122,20 +122,21 @@ namespace MarketOtamasyon.Forms
             // 
             // txtAra
             // 
-            this.txtAra.Location = new System.Drawing.Point(385, 35);
+            this.txtAra.Location = new System.Drawing.Point(381, 46);
             this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(84, 22);
+            this.txtAra.Size = new System.Drawing.Size(115, 22);
             this.txtAra.TabIndex = 3;
             this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
             // 
             // btnOdeme
             // 
-            this.btnOdeme.Location = new System.Drawing.Point(27, 201);
+            this.btnOdeme.BackColor = System.Drawing.Color.LightGreen;
+            this.btnOdeme.Location = new System.Drawing.Point(24, 207);
             this.btnOdeme.Name = "btnOdeme";
             this.btnOdeme.Size = new System.Drawing.Size(89, 47);
             this.btnOdeme.TabIndex = 1;
             this.btnOdeme.Text = "Ödeme";
-            this.btnOdeme.UseVisualStyleBackColor = true;
+            this.btnOdeme.UseVisualStyleBackColor = false;
             this.btnOdeme.Click += new System.EventHandler(this.btnOdeme_Click);
             // 
             // lblId
@@ -165,6 +166,7 @@ namespace MarketOtamasyon.Forms
             // 
             // grpboxOdeme
             // 
+            this.grpboxOdeme.BackColor = System.Drawing.Color.LightSteelBlue;
             this.grpboxOdeme.Controls.Add(this.txtId);
             this.grpboxOdeme.Controls.Add(this.btnListele);
             this.grpboxOdeme.Controls.Add(this.txtÖdeme);
@@ -177,7 +179,7 @@ namespace MarketOtamasyon.Forms
             this.grpboxOdeme.Controls.Add(this.btnOdeme);
             this.grpboxOdeme.Location = new System.Drawing.Point(29, 141);
             this.grpboxOdeme.Name = "grpboxOdeme";
-            this.grpboxOdeme.Size = new System.Drawing.Size(222, 262);
+            this.grpboxOdeme.Size = new System.Drawing.Size(222, 273);
             this.grpboxOdeme.TabIndex = 6;
             this.grpboxOdeme.TabStop = false;
             this.grpboxOdeme.Text = "Ödeme Paneli";
@@ -191,12 +193,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnListele
             // 
-            this.btnListele.Location = new System.Drawing.Point(124, 201);
+            this.btnListele.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnListele.Location = new System.Drawing.Point(119, 207);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(89, 47);
             this.btnListele.TabIndex = 4;
             this.btnListele.Text = "Borç Listele";
-            this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.UseVisualStyleBackColor = false;
             this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // lblKayit

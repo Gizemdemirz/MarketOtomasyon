@@ -19,8 +19,9 @@ namespace MarketOtamasyon.Forms
         }
         OtomasyonContext otomasyonContext = new OtomasyonContext();
         private void btnGiris_Click(object sender, EventArgs e)
-        { var kullanici = from x in otomasyonContext.Kullanicis where x.KullaniciAdi == txtAd.Text.Trim() & x.Sifre == txtSifre.Text.Trim()
-                    select x;
+        { var kullanici = from x in otomasyonContext.Kullanicis
+             where x.KullaniciAdi == txtAd.Text.Trim() & x.Sifre == txtSifre.Text.Trim()
+                          select x;
             
             if (kullanici.Any())
             {

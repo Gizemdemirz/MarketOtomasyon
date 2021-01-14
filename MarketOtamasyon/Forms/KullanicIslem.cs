@@ -106,5 +106,33 @@ namespace MarketOtamasyon.Forms
         {
             KullanıcıListele();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double TedarikciOdenecek = otomasyonContext.Tedarikcis.Sum(x => x.AlınacakTutar);
+                double MusteriAlınacak = otomasyonContext.Musteris.Sum(x => x.borc);
+                double Toplamsatıs = otomasyonContext.Satis.Sum(x => x.tutar);
+
+                double durum = Toplamsatıs - (TedarikciOdenecek + MusteriAlınacak);
+                if (durum <= 0)
+                {
+                    double zarar = Math.Round((durum * -1 / 100), 2);
+                    MessageBox.Show("Tedarikçilere ödenecek tutar: " + TedarikciOdenecek.ToString() + " TL" +
+                        "\nMüsterileriden Alınacak: " + MusteriAlınacak.ToString() + " TL" +
+                        "\nMarket zararı: %" + zarar.ToString(),"Durum",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    double kar = Math.Round((durum / 100), 2);
+                    MessageBox.Show("Tedarikçilere ödenecek tutar: " + TedarikciOdenecek.ToString() + " TL" +
+                        "\nMüsterileriden Alınacak: " + MusteriAlınacak.ToString() + " TL" +
+                        "\nMarket karı: %" + kar.ToString(),"Durum", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch { }
+            
+        }
     }
 }

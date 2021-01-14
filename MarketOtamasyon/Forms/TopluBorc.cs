@@ -15,6 +15,8 @@ using iTextSharp.text.pdf;
 using System.IO;
 using Microsoft.Office.Interop.Word;
 using Word = Microsoft.Office.Interop.Word;
+using MarketOtamasyon.Entities;
+
 namespace MarketOtamasyon.Forms
 {
    
@@ -29,21 +31,22 @@ namespace MarketOtamasyon.Forms
         private void btnBorc_Click(object sender, EventArgs e)
         {
             
-            var musteriSatis = (from x in otomasyonContext.Musteris
-                        join
-                  y in otomasyonContext.Satis on x.MusteriId equals y.Musteri.MusteriId
-                  where x.borc != 0
-                        select x );
-        
-            dataGridView1.DataSource = musteriSatis.Select(x => new
-            {
-                AdSoyad = x.MusteriAdi + " " + x.MusteriSoyadi,
-                ToplamSatis = x.Satis.Count(),
-                ToplamÖdeme = x.Satis.Sum(y=> y.tutar) - x.borc,
-                KalanBorc =  Math.Round(x.borc, 2),
+            
+             var musteriSatis = (from x in otomasyonContext.Musteris
+                         join
+                   y in otomasyonContext.Satis on x.MusteriId equals y.Musteri.MusteriId
+                   where x.borc != 0
+                         select x );
 
-            }).Distinct().ToList() ;
-        
+             dataGridView1.DataSource = musteriSatis.Select(x => new
+             {
+                 AdSoyad = x.MusteriAdi + " " + x.MusteriSoyadi,
+                 ToplamSatıs = x.Satis.Count(),
+                 ToplamÖdeme = Math.Round((x.Satis.Sum(y=> y.tutar) - x.borc),2),
+                 KalanBorc =  Math.Round(x.borc, 2),
+
+             }).Distinct().ToList() ;
+
 
         }
 

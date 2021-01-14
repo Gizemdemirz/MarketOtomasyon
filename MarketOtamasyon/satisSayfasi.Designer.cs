@@ -66,12 +66,12 @@ namespace MarketOtamasyon
             this.raporlamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raporToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ürünBazlıRaporToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.müşteriBazlıRaporToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayarlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kullanıcıİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblToplamTutar = new System.Windows.Forms.Label();
             this.lblT = new System.Windows.Forms.Label();
-            this.müşteriBazlıRaporToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,22 +84,23 @@ namespace MarketOtamasyon
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.DarkGray;
-            this.dataGridView1.Location = new System.Drawing.Point(323, 89);
+            this.dataGridView1.Location = new System.Drawing.Point(576, 333);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(733, 429);
+            this.dataGridView1.Size = new System.Drawing.Size(824, 469);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox1.Controls.Add(this.cmboxSecim);
             this.groupBox1.Controls.Add(this.cmboxMusteri);
             this.groupBox1.Controls.Add(this.lblMusteriAd);
             this.groupBox1.Controls.Add(this.lblOdemeT);
-            this.groupBox1.Location = new System.Drawing.Point(12, 108);
+            this.groupBox1.Location = new System.Drawing.Point(247, 365);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 157);
+            this.groupBox1.Size = new System.Drawing.Size(283, 160);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Müşteri İşlemleri";
@@ -140,6 +141,7 @@ namespace MarketOtamasyon
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox2.Controls.Add(this.lblTutar);
             this.groupBox2.Controls.Add(this.lblSatisF);
             this.groupBox2.Controls.Add(this.lblMiktar);
@@ -150,9 +152,9 @@ namespace MarketOtamasyon
             this.groupBox2.Controls.Add(this.txtMiktar);
             this.groupBox2.Controls.Add(this.txtUrunAdi);
             this.groupBox2.Controls.Add(this.txtBarkodNo);
-            this.groupBox2.Location = new System.Drawing.Point(12, 282);
+            this.groupBox2.Location = new System.Drawing.Point(247, 539);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(285, 211);
+            this.groupBox2.Size = new System.Drawing.Size(285, 228);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ürün İşlemleri";
@@ -244,46 +246,51 @@ namespace MarketOtamasyon
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(1074, 173);
+            this.btnEkle.BackColor = System.Drawing.Color.LightGreen;
+            this.btnEkle.Location = new System.Drawing.Point(1433, 396);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(87, 43);
+            this.btnEkle.Size = new System.Drawing.Size(142, 70);
             this.btnEkle.TabIndex = 3;
             this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(1074, 232);
+            this.btnSil.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSil.Location = new System.Drawing.Point(1433, 472);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(87, 43);
+            this.btnSil.Size = new System.Drawing.Size(142, 70);
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnIptal
             // 
-            this.btnIptal.Location = new System.Drawing.Point(1074, 291);
+            this.btnIptal.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnIptal.Location = new System.Drawing.Point(1433, 548);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(87, 43);
+            this.btnIptal.Size = new System.Drawing.Size(142, 70);
             this.btnIptal.TabIndex = 5;
             this.btnIptal.Text = "İptal";
-            this.btnIptal.UseVisualStyleBackColor = true;
+            this.btnIptal.UseVisualStyleBackColor = false;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
             // btnSatis
             // 
-            this.btnSatis.Location = new System.Drawing.Point(1074, 350);
+            this.btnSatis.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnSatis.Location = new System.Drawing.Point(1433, 624);
             this.btnSatis.Name = "btnSatis";
-            this.btnSatis.Size = new System.Drawing.Size(87, 43);
+            this.btnSatis.Size = new System.Drawing.Size(142, 70);
             this.btnSatis.TabIndex = 6;
             this.btnSatis.Text = "Satış Yap";
-            this.btnSatis.UseVisualStyleBackColor = true;
+            this.btnSatis.UseVisualStyleBackColor = false;
             this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Gray;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.müşteriToolStripMenuItem,
@@ -294,7 +301,7 @@ namespace MarketOtamasyon
             this.ayarlarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1173, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1870, 28);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -304,7 +311,7 @@ namespace MarketOtamasyon
             this.müşteriListeleToolStripMenuItem,
             this.ödemeİşlemleriToolStripMenuItem});
             this.müşteriToolStripMenuItem.Name = "müşteriToolStripMenuItem";
-            this.müşteriToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.müşteriToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
             this.müşteriToolStripMenuItem.Text = "Müşteri";
             // 
             // müşteriListeleToolStripMenuItem
@@ -327,7 +334,7 @@ namespace MarketOtamasyon
             this.ürünEkleToolStripMenuItem,
             this.ürünListeleToolStripMenuItem});
             this.ürünToolStripMenuItem.Name = "ürünToolStripMenuItem";
-            this.ürünToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.ürünToolStripMenuItem.Size = new System.Drawing.Size(54, 26);
             this.ürünToolStripMenuItem.Text = "Ürün";
             // 
             // ürünEkleToolStripMenuItem
@@ -351,7 +358,7 @@ namespace MarketOtamasyon
             this.satışlarıListeleToolStripMenuItem,
             this.satışTrendiToolStripMenuItem});
             this.satışToolStripMenuItem.Name = "satışToolStripMenuItem";
-            this.satışToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.satışToolStripMenuItem.Size = new System.Drawing.Size(54, 26);
             this.satışToolStripMenuItem.Text = "Satış";
             // 
             // satışSayfasıToolStripMenuItem
@@ -380,7 +387,7 @@ namespace MarketOtamasyon
             this.tedarikçiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tedarikçiİşlemleriToolStripMenuItem});
             this.tedarikçiToolStripMenuItem.Name = "tedarikçiToolStripMenuItem";
-            this.tedarikçiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.tedarikçiToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.tedarikçiToolStripMenuItem.Text = "Tedarikçi";
             // 
             // tedarikçiİşlemleriToolStripMenuItem
@@ -397,22 +404,29 @@ namespace MarketOtamasyon
             this.ürünBazlıRaporToolStripMenuItem,
             this.müşteriBazlıRaporToolStripMenuItem});
             this.raporlamaToolStripMenuItem.Name = "raporlamaToolStripMenuItem";
-            this.raporlamaToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.raporlamaToolStripMenuItem.Size = new System.Drawing.Size(96, 26);
             this.raporlamaToolStripMenuItem.Text = "Raporlama";
             // 
             // raporToolStripMenuItem
             // 
             this.raporToolStripMenuItem.Name = "raporToolStripMenuItem";
-            this.raporToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.raporToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.raporToolStripMenuItem.Text = "Toplu Müşteri Borç";
             this.raporToolStripMenuItem.Click += new System.EventHandler(this.raporToolStripMenuItem_Click);
             // 
             // ürünBazlıRaporToolStripMenuItem
             // 
             this.ürünBazlıRaporToolStripMenuItem.Name = "ürünBazlıRaporToolStripMenuItem";
-            this.ürünBazlıRaporToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ürünBazlıRaporToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.ürünBazlıRaporToolStripMenuItem.Text = "Ürün Bazlı Rapor";
             this.ürünBazlıRaporToolStripMenuItem.Click += new System.EventHandler(this.ürünBazlıRaporToolStripMenuItem_Click);
+            // 
+            // müşteriBazlıRaporToolStripMenuItem
+            // 
+            this.müşteriBazlıRaporToolStripMenuItem.Name = "müşteriBazlıRaporToolStripMenuItem";
+            this.müşteriBazlıRaporToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.müşteriBazlıRaporToolStripMenuItem.Text = "Müşteri Bazlı Rapor";
+            this.müşteriBazlıRaporToolStripMenuItem.Click += new System.EventHandler(this.müşteriBazlıRaporToolStripMenuItem_Click);
             // 
             // ayarlarToolStripMenuItem
             // 
@@ -420,7 +434,7 @@ namespace MarketOtamasyon
             this.kullanıcıİşlemleriToolStripMenuItem,
             this.çıkışToolStripMenuItem});
             this.ayarlarToolStripMenuItem.Name = "ayarlarToolStripMenuItem";
-            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.ayarlarToolStripMenuItem.Text = "Ayarlar";
             // 
             // kullanıcıİşlemleriToolStripMenuItem
@@ -440,7 +454,7 @@ namespace MarketOtamasyon
             // lblToplamTutar
             // 
             this.lblToplamTutar.AutoSize = true;
-            this.lblToplamTutar.Location = new System.Drawing.Point(950, 558);
+            this.lblToplamTutar.Location = new System.Drawing.Point(1269, 825);
             this.lblToplamTutar.Name = "lblToplamTutar";
             this.lblToplamTutar.Size = new System.Drawing.Size(0, 17);
             this.lblToplamTutar.TabIndex = 10;
@@ -448,24 +462,17 @@ namespace MarketOtamasyon
             // lblT
             // 
             this.lblT.AutoSize = true;
-            this.lblT.Location = new System.Drawing.Point(800, 558);
+            this.lblT.Location = new System.Drawing.Point(1119, 825);
             this.lblT.Name = "lblT";
             this.lblT.Size = new System.Drawing.Size(0, 17);
             this.lblT.TabIndex = 11;
-            // 
-            // müşteriBazlıRaporToolStripMenuItem
-            // 
-            this.müşteriBazlıRaporToolStripMenuItem.Name = "müşteriBazlıRaporToolStripMenuItem";
-            this.müşteriBazlıRaporToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.müşteriBazlıRaporToolStripMenuItem.Text = "Müşteri Bazlı Rapor";
-            this.müşteriBazlıRaporToolStripMenuItem.Click += new System.EventHandler(this.müşteriBazlıRaporToolStripMenuItem_Click);
             // 
             // satisSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1173, 631);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(1870, 851);
             this.Controls.Add(this.lblT);
             this.Controls.Add(this.lblToplamTutar);
             this.Controls.Add(this.btnSatis);
@@ -480,6 +487,7 @@ namespace MarketOtamasyon
             this.Name = "satisSayfasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Satış Sayfası";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.satisSayfasi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

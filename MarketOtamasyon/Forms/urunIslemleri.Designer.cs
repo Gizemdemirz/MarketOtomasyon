@@ -41,12 +41,12 @@ namespace MarketOtamasyon.Forms
             this.lblSayı = new System.Windows.Forms.Label();
             this.lblMiktarSayı = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTemizle = new System.Windows.Forms.Button();
             this.txtAlıs = new System.Windows.Forms.TextBox();
             this.txtBarkodNo = new System.Windows.Forms.TextBox();
             this.lblAlıs = new System.Windows.Forms.Label();
             this.txtMiktar = new System.Windows.Forms.TextBox();
             this.lblMiktar = new System.Windows.Forms.Label();
-            this.btnTemizle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,7 @@ namespace MarketOtamasyon.Forms
             // lblAra
             // 
             this.lblAra.AutoSize = true;
-            this.lblAra.Location = new System.Drawing.Point(293, 35);
+            this.lblAra.Location = new System.Drawing.Point(300, 54);
             this.lblAra.Name = "lblAra";
             this.lblAra.Size = new System.Drawing.Size(83, 17);
             this.lblAra.TabIndex = 28;
@@ -62,7 +62,7 @@ namespace MarketOtamasyon.Forms
             // 
             // txtAra
             // 
-            this.txtAra.Location = new System.Drawing.Point(395, 35);
+            this.txtAra.Location = new System.Drawing.Point(402, 54);
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(124, 22);
             this.txtAra.TabIndex = 27;
@@ -70,12 +70,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnGuncelle
             // 
+            this.btnGuncelle.BackColor = System.Drawing.Color.SandyBrown;
             this.btnGuncelle.Location = new System.Drawing.Point(133, 256);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(99, 41);
             this.btnGuncelle.TabIndex = 25;
             this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // lblBarkod
@@ -150,6 +151,7 @@ namespace MarketOtamasyon.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox1.Controls.Add(this.btnTemizle);
             this.groupBox1.Controls.Add(this.txtAlıs);
             this.groupBox1.Controls.Add(this.txtSatıs);
@@ -168,6 +170,17 @@ namespace MarketOtamasyon.Forms
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
+            // 
+            // btnTemizle
+            // 
+            this.btnTemizle.BackColor = System.Drawing.Color.LightGreen;
+            this.btnTemizle.Location = new System.Drawing.Point(21, 256);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(99, 41);
+            this.btnTemizle.TabIndex = 44;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = false;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // txtAlıs
             // 
@@ -210,16 +223,6 @@ namespace MarketOtamasyon.Forms
             this.lblMiktar.Size = new System.Drawing.Size(50, 17);
             this.lblMiktar.TabIndex = 32;
             this.lblMiktar.Text = "Miktar:";
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Location = new System.Drawing.Point(21, 256);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(99, 41);
-            this.btnTemizle.TabIndex = 44;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.UseVisualStyleBackColor = true;
-            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // urunIslemleri
             // 

@@ -53,12 +53,13 @@ namespace MarketOtamasyon.Forms
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button2.Location = new System.Drawing.Point(519, 378);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 35);
             this.button2.TabIndex = 4;
             this.button2.Text = "Dosya seç";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // openFileDialog1
@@ -75,12 +76,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnStok
             // 
+            this.btnStok.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnStok.Location = new System.Drawing.Point(645, 378);
             this.btnStok.Name = "btnStok";
             this.btnStok.Size = new System.Drawing.Size(86, 35);
             this.btnStok.TabIndex = 7;
             this.btnStok.Text = "Stoğa İşle";
-            this.btnStok.UseVisualStyleBackColor = true;
+            this.btnStok.UseVisualStyleBackColor = false;
             this.btnStok.Click += new System.EventHandler(this.btnStok_Click);
             // 
             // cmbTedarikci

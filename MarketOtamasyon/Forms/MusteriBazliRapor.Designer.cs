@@ -48,12 +48,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnListele
             // 
+            this.btnListele.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnListele.Location = new System.Drawing.Point(841, 79);
             this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(112, 48);
+            this.btnListele.Size = new System.Drawing.Size(121, 62);
             this.btnListele.TabIndex = 1;
             this.btnListele.Text = "Müşteri Listele";
-            this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.UseVisualStyleBackColor = false;
             this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // MusteriBazliRapor

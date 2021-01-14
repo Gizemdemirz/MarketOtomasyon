@@ -43,8 +43,8 @@ namespace MarketOtamasyon.Forms
                             join
                       y in otomasyonContext.Satis on x.MusteriId equals y.Musteri.MusteriId
                             select y;
-                var nolur = detay.GroupBy(z => z.UrunAdi).Select(y => new
-                {
+                var nolur = detay.Where(x=> x.Musteri.MusteriId.ToString() == id).GroupBy(z => z.UrunAdi).Select(y => new
+                {   
                     UrunAdi = y.Key,
                     UrunMiktarı = y.Sum(z => z.UrunMiktarı),
                     tutar = y.Sum(z=> z.tutar)

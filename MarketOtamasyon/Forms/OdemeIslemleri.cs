@@ -71,7 +71,7 @@ namespace MarketOtamasyon.Forms
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
 
         {
-            if (dataGridView1.Rows.Count != 0)
+            if (dataGridView1.Rows.Count != 0 & txtId.Text == "")
             {
                 lblAra.Visible = false;
                 txtAra.Visible = false;
@@ -127,6 +127,7 @@ namespace MarketOtamasyon.Forms
                     {
                         MessageBox.Show("Lütfen ödenen tutarı kontrol ediniz!!", "Ödeme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Temizle();
+                        BorcListele();
 
                     }
                 }

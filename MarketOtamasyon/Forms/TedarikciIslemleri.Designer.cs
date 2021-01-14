@@ -53,6 +53,7 @@ namespace MarketOtamasyon.Forms
             // 
             // grpboxOdeme
             // 
+            this.grpboxOdeme.BackColor = System.Drawing.Color.LightSteelBlue;
             this.grpboxOdeme.Controls.Add(this.txtÖdeme);
             this.grpboxOdeme.Controls.Add(this.txtAd);
             this.grpboxOdeme.Controls.Add(this.txtID);
@@ -108,12 +109,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnOdeme
             // 
+            this.btnOdeme.BackColor = System.Drawing.Color.LightGreen;
             this.btnOdeme.Location = new System.Drawing.Point(114, 152);
             this.btnOdeme.Name = "btnOdeme";
             this.btnOdeme.Size = new System.Drawing.Size(90, 35);
             this.btnOdeme.TabIndex = 8;
             this.btnOdeme.Text = "Ödeme";
-            this.btnOdeme.UseVisualStyleBackColor = true;
+            this.btnOdeme.UseVisualStyleBackColor = false;
             this.btnOdeme.Click += new System.EventHandler(this.btnOdeme_Click);
             // 
             // label1
@@ -127,7 +129,7 @@ namespace MarketOtamasyon.Forms
             // 
             // txtAra
             // 
-            this.txtAra.Location = new System.Drawing.Point(399, 62);
+            this.txtAra.Location = new System.Drawing.Point(410, 62);
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(84, 22);
             this.txtAra.TabIndex = 11;
@@ -136,7 +138,7 @@ namespace MarketOtamasyon.Forms
             // lblAra
             // 
             this.lblAra.AutoSize = true;
-            this.lblAra.Location = new System.Drawing.Point(285, 62);
+            this.lblAra.Location = new System.Drawing.Point(296, 62);
             this.lblAra.Name = "lblAra";
             this.lblAra.Size = new System.Drawing.Size(96, 17);
             this.lblAra.TabIndex = 10;
@@ -180,6 +182,7 @@ namespace MarketOtamasyon.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox1.Controls.Add(this.btnSil);
             this.groupBox1.Controls.Add(this.btnEkle);
             this.groupBox1.Controls.Add(this.txtTAdı);
@@ -193,22 +196,24 @@ namespace MarketOtamasyon.Forms
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(123, 97);
+            this.btnSil.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSil.Location = new System.Drawing.Point(121, 97);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(90, 35);
             this.btnSil.TabIndex = 5;
             this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(10, 97);
+            this.btnEkle.BackColor = System.Drawing.Color.LightGreen;
+            this.btnEkle.Location = new System.Drawing.Point(18, 97);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(90, 35);
             this.btnEkle.TabIndex = 4;
             this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // TedarikciIslemleri

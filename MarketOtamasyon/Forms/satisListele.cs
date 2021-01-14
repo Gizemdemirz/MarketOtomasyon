@@ -125,8 +125,6 @@ namespace MarketOtamasyon.Forms
 
         private void btnCokSatan_Click(object sender, EventArgs e)
         {
-
-
          
             var bul =  from x in  otomasyonContext.Satis.GroupBy(x=> x.UrunAdi).Select(y => new
             {

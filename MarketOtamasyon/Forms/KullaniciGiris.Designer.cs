@@ -75,12 +75,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnGiris
             // 
+            this.btnGiris.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnGiris.Location = new System.Drawing.Point(154, 231);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(80, 41);
             this.btnGiris.TabIndex = 2;
             this.btnGiris.Text = "Giriş";
-            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // lblMesaj
@@ -106,12 +107,13 @@ namespace MarketOtamasyon.Forms
             // 
             // btnCikis
             // 
+            this.btnCikis.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnCikis.Location = new System.Drawing.Point(263, 231);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(80, 41);
             this.btnCikis.TabIndex = 4;
             this.btnCikis.Text = "Çıkış";
-            this.btnCikis.UseVisualStyleBackColor = true;
+            this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // KullaniciGiris
