@@ -4,7 +4,7 @@ txt dosyasından ürün ekleme, ürün listeleme, barkod işlemleri ve stok taki
 Ayrıca müşteri borç raporları, çok satan ürünler, ürün kar oranları
 grafiksel olarak görüntülenip excel, word ve pdf çıktısı alınabilmektedir.
 
-<h1>Satış Sayfası
+<h2>Satış Sayfası
   
   ![githubgriş](https://user-images.githubusercontent.com/62529090/104782409-307a5800-5795-11eb-86e6-54090a337457.JPG)
 
