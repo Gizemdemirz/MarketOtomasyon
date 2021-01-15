@@ -6,8 +6,20 @@ grafiksel olarak görüntülenip excel, word ve pdf çıktısı alınabilmektedi
 
 <h1>Satış Sayfası
   
-  ![satısSayfas2ı](https://user-images.githubusercontent.com/62529090/104781548-b7c6cc00-5793-11eb-8758-a2f6ba439ec2.jpg)
+  ![githubgriş](https://user-images.githubusercontent.com/62529090/104782409-307a5800-5795-11eb-86e6-54090a337457.JPG)
 
 
+<h2>Ürün Listeleme
   
+  ![github](https://user-images.githubusercontent.com/62529090/104782473-4daf2680-5795-11eb-8f9c-02a3f3879507.JPG)
+  
+  
+<h2>Satış Trendi
+  
+  ![gitsat](https://user-images.githubusercontent.com/62529090/104782572-7afbd480-5795-11eb-8510-916b74042d3a.JPG)
+  
+  
+<h2>Ürün Kar Oranı
+  
+  ![gitrapor](https://user-images.githubusercontent.com/62529090/104782631-97980c80-5795-11eb-8d5b-e2f5f45e5721.JPG)
    
