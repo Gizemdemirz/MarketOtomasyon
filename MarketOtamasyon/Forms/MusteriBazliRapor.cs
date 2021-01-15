@@ -43,7 +43,7 @@ namespace MarketOtamasyon.Forms
                             join
                       y in otomasyonContext.Satis on x.MusteriId equals y.Musteri.MusteriId
                             select y;
-                var nolur = detay.Where(x=> x.Musteri.MusteriId.ToString() == id).GroupBy(z => z.UrunAdi).Select(y => new
+                var müsteri = detay.Where(x=> x.Musteri.MusteriId.ToString() == id).GroupBy(z => z.UrunAdi).Select(y => new
                 {   
                     UrunAdi = y.Key,
                     UrunMiktarı = y.Sum(z => z.UrunMiktarı),
@@ -51,7 +51,7 @@ namespace MarketOtamasyon.Forms
 
                 }).ToList().OrderByDescending(z=> z.UrunMiktarı);
 
-                dataGridView1.DataSource = nolur.Select(x => new
+                dataGridView1.DataSource = müsteri.Select(x => new
                 {
                     Ürün_Adı = x.UrunAdi,
                     Miktar = x.UrunMiktarı,

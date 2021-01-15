@@ -78,6 +78,7 @@ namespace MarketOtamasyon.Forms
             }
                 ).ToList();
 
+
         }
         
 
@@ -100,19 +101,20 @@ namespace MarketOtamasyon.Forms
                    
                     
                     MessageBox.Show("Satış kaydı silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (dataGridView1.Columns.Count == 7)
+                    if (satis.Musteri ==  null)
+                    {
+                        otomasyonContext.Satis.Remove(satis);
+                        otomasyonContext.SaveChanges();
+                      
+                     
+
+                    }
+                    else
                     {
                         if (satis.Musteri.borc >= satis.tutar)
                         {
                             satis.Musteri.borc -= satis.tutar;
                         }
-                        otomasyonContext.Satis.Remove(satis);
-                        otomasyonContext.SaveChanges();
-                        CariSatisListele();
-
-                    }
-                    else
-                    {
                         otomasyonContext.Satis.Remove(satis);
                         otomasyonContext.SaveChanges();
                         SatisListele();

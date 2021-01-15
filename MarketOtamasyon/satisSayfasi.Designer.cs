@@ -311,7 +311,7 @@ namespace MarketOtamasyon
             this.müşteriListeleToolStripMenuItem,
             this.ödemeİşlemleriToolStripMenuItem});
             this.müşteriToolStripMenuItem.Name = "müşteriToolStripMenuItem";
-            this.müşteriToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
+            this.müşteriToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.müşteriToolStripMenuItem.Text = "Müşteri";
             // 
             // müşteriListeleToolStripMenuItem
@@ -334,7 +334,7 @@ namespace MarketOtamasyon
             this.ürünEkleToolStripMenuItem,
             this.ürünListeleToolStripMenuItem});
             this.ürünToolStripMenuItem.Name = "ürünToolStripMenuItem";
-            this.ürünToolStripMenuItem.Size = new System.Drawing.Size(54, 26);
+            this.ürünToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
             this.ürünToolStripMenuItem.Text = "Ürün";
             // 
             // ürünEkleToolStripMenuItem
@@ -358,7 +358,7 @@ namespace MarketOtamasyon
             this.satışlarıListeleToolStripMenuItem,
             this.satışTrendiToolStripMenuItem});
             this.satışToolStripMenuItem.Name = "satışToolStripMenuItem";
-            this.satışToolStripMenuItem.Size = new System.Drawing.Size(54, 26);
+            this.satışToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
             this.satışToolStripMenuItem.Text = "Satış";
             // 
             // satışSayfasıToolStripMenuItem
@@ -387,7 +387,7 @@ namespace MarketOtamasyon
             this.tedarikçiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tedarikçiİşlemleriToolStripMenuItem});
             this.tedarikçiToolStripMenuItem.Name = "tedarikçiToolStripMenuItem";
-            this.tedarikçiToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
+            this.tedarikçiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.tedarikçiToolStripMenuItem.Text = "Tedarikçi";
             // 
             // tedarikçiİşlemleriToolStripMenuItem
@@ -404,7 +404,7 @@ namespace MarketOtamasyon
             this.ürünBazlıRaporToolStripMenuItem,
             this.müşteriBazlıRaporToolStripMenuItem});
             this.raporlamaToolStripMenuItem.Name = "raporlamaToolStripMenuItem";
-            this.raporlamaToolStripMenuItem.Size = new System.Drawing.Size(96, 26);
+            this.raporlamaToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.raporlamaToolStripMenuItem.Text = "Raporlama";
             // 
             // raporToolStripMenuItem
@@ -434,7 +434,7 @@ namespace MarketOtamasyon
             this.kullanıcıİşlemleriToolStripMenuItem,
             this.çıkışToolStripMenuItem});
             this.ayarlarToolStripMenuItem.Name = "ayarlarToolStripMenuItem";
-            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
+            this.ayarlarToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.ayarlarToolStripMenuItem.Text = "Ayarlar";
             // 
             // kullanıcıİşlemleriToolStripMenuItem

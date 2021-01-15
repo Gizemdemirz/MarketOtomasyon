@@ -428,5 +428,7 @@ namespace MarketOtamasyon
             MusteriBazliRapor musteriBazliRapor = new MusteriBazliRapor();
             musteriBazliRapor.ShowDialog();
         }
+
+     
     }
 }

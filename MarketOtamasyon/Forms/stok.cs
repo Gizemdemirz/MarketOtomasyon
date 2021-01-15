@@ -93,12 +93,12 @@ namespace MarketOtamasyon.Forms
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
                     var barkodNo = dataGridView1.Rows[i].Cells[2].Value;
-                    var x = from dene in otomasyonContext.Uruns
-                            where dene.barkodNo.ToString() == barkodNo.ToString()
-                            select dene;
-                    if (x.Any())
+                    var ara = from x in otomasyonContext.Uruns
+                            where x.barkodNo.ToString() == barkodNo.ToString()
+                            select x;
+                    if (ara.Any())
                     {
-                        foreach (var item in x)
+                        foreach (var item in ara)
                         {
 
                             item.alisFiyati = double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());

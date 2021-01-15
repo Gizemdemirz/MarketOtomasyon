@@ -52,7 +52,7 @@ namespace MarketOtamasyon.Forms
 
         void Temizle()
         {
-            foreach (Control item in this.Controls)
+            foreach (Control item in groupBox1.Controls)
             {
                 if (item is TextBox)
                 {
